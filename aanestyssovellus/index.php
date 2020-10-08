@@ -14,16 +14,16 @@ session_start();
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-            <a class="nav-link" href="poll-create.php">Luo Äänestys</a>
+            <a class="btn btn-outline-info" href="poll-create.php">Luo Äänestys</a>
       </li>
       <li class="nav-item">
             <?php if(!isset($_SESSION['logged_in']))
                 {
-                    echo '<a class="nav-link" href="loginform.php">Kirjaudu Sisään</a>';
+                    echo '<a class="btn btn-outline-info" href="loginform.php">Kirjaudu Sisään</a>';
                 }
                 else
                 {
-                    echo '<a class="nav-link" href="logout.php">Kirjaudu Ulos</a>';
+                    echo '<a class="btn btn-outline-info" href="logout.php">Kirjaudu Ulos</a>';
                 }?>
       </li>
     </ul>

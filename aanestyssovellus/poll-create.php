@@ -15,16 +15,16 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href="index.php">Etusivu</a>
+            <a class="btn btn-outline-info" href="index.php">Etusivu</a>
         </li>
         <li class="nav-item">
             <?php if(!isset($_SESSION['logged_in']))
                 {
-                    echo '<a class="nav-link" href="loginform.php">Kirjaudu Sisään</a>';
+                    echo '<a class="btn btn-outline-info" href="loginform.php">Kirjaudu Sisään</a>';
                 }
                 else
                 {
-                    echo '<a class="nav-link" href="logout.php">Kirjaudu Ulos</a>';
+                    echo '<a class="btn btn-outline-info" href="logout.php">Kirjaudu Ulos</a>';
                 }?>
         </li>
         </ul>
@@ -35,7 +35,7 @@ session_start();
         <h1>Äänestyksen Luominen</h1>
     </div>
 
-    <form action="uusi-aanestys.php" method="POST">
+    <form action="new-poll.php" method="POST">
         <div class="container">
                 <h2>Uusi Äänestys</h2>
                 <label for="Aihe">Aihe</label>
@@ -52,9 +52,9 @@ session_start();
                     <label for="vaihtoehto4">Vaihtoehto 4</label><br>
                     <input type="text" name="vaihtoehto4" ><br><br>
                 </div>
+                <input type="submit" name="submit" value="Luo Uusi Äänestys"><br><br>
     </form>
             <button id="lisaa-vaihtoehtoja-nappi" class="btn btn-outline-primary" onclick="lisaaKenttia()">Lisää Vaihtoehtoja</button><br>
-            <input type="submit" name="submit" value="Luo Uusi Äänestys">
         </div>
 
 
@@ -63,7 +63,6 @@ session_start();
 
     function lisaaKenttia(){
         var x = document.getElementById("lisaa-vaihtoehtoja");
-        var nappi = document.getElementById("lisaa-vaihtoehtoja-nappi");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
