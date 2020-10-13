@@ -35,7 +35,7 @@ session_start();
         <h1>Äänestyksen Luominen</h1>
     </div>
 
-    <form action="new-poll.php" method="POST">
+            <form action="new-poll.php" method="POST">
         <div class="container">
                 <h2>Uusi Äänestys</h2>
                 <label for="Aihe">Aihe</label>
@@ -53,7 +53,8 @@ session_start();
                     <input type="text" name="vaihtoehto4" ><br><br>
                 </div>
                 <input type="submit" name="submit" value="Luo Uusi Äänestys"><br><br>
-    </form>
+            </form>
+            
             <button id="lisaa-vaihtoehtoja-nappi" class="btn btn-outline-primary" onclick="lisaaKenttia()">Lisää Vaihtoehtoja</button><br>
         </div>
 
