@@ -20,10 +20,10 @@ if (isset($_SESSION['logged_in'])) {
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-            <a class="btn btn-outline-info" href="index.php">Etusivu</a>
+            <a class="btn btn-warning" href="index.php">Etusivu</a>
       </li>
       <li class="nav-item">
-            <a class="btn btn-outline-info" href="poll-create.php">Luo Äänestys</a>
+            <a class="btn btn-warning" href="poll-create.php">Luo Äänestys</a>
       </li>
     </ul>
   </div>
