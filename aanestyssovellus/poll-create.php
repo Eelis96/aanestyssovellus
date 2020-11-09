@@ -39,6 +39,11 @@ session_start();
                     echo'<div class="alert alert-dismissible alert-danger">
                     <strong>Täytä kaikki Tyhjät Kentät!</strong></div>';
                 }
+
+        if(isset($_GET['success'])){
+                    echo'<div class="alert alert-dismissible alert-success">
+                    <strong>Äänestyksen Luominen Onnistui!</strong></div>';
+                }
     ?>
         <form action="new-poll.php" method="POST">
         <div class="container">
