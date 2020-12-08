@@ -8,17 +8,17 @@ function registerNewUser(event){
     const password2 = document.forms['register']['confirmPassword'].value;
 
     if(username.length <= 0){
-        showMessage('Username Required');
+        showMessage('error', 'Username Required');
         return;
     }
 
     if(password.length <= 4){
-        showMessage('Password Is Too Short');
+        showMessage('error', 'Password Is Too Short');
         return;
     }
 
     if(password.localeCompare(password2) != 0){
-        showMessage('Password Not Matching');
+        showMessage('error', 'Password Not Matching');
         return;
     }
 

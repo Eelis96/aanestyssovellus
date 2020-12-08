@@ -3,12 +3,13 @@
 
 <div class="container">
 
-  <div id="msg" class="alert alert-dismissible alert-danger d-none">
+  <div id="msg" class="alert alert-dismissible alert-warning d-none">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="alert-heading"></h4>
     <p class="mb-0"></p>
   </div>
 
-  <form>
+  <form name="login">
     <fieldset>
       <legend>Login</legend>
       <div class="form-group">
