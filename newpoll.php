@@ -16,7 +16,7 @@ if(!isset($_SESSION['logged_in'])){
     <p class="mb-0"></p>
   </div>
 
-  <form name="poll">
+  <form name="newPoll">
     <fieldset>
         <legend>Create New Poll</legend>
         <div class="form-group">

@@ -2,6 +2,51 @@ let optionCount = 2;
 
 document.getElementById('addOption').addEventListener('click', addNewOption);
 document.getElementById('deleteLastOption').addEventListener('click', deleteLastOption);
+document.forms['newPoll'].addEventListener('submit', createNewPoll);
+
+function createNewPoll(event){
+
+    event.preventDefault();
+
+    const topic = document.forms['newPoll']['topic'].value;
+    const start = document.forms['newPoll']['start'].value;
+    const end = document.forms['newPoll']['end'].value;
+
+    const options = [];
+
+    const inputs = document.querySelectorAll('input');
+
+    inputs.forEach(function (input){
+        if(input.name.indexOf('option') == 0){
+            options.push(input.value);
+        }
+    })
+
+    if(topic.length <= 0 || options[0].length <= 0 || options[1].length <= 0){
+        showMessage('error', 'Topic And At Least Two Options Must Be Set!');
+        return;
+    }
+
+    let postData = `topic=${topic}&start=${start}&end=${end}`;
+    let i = 0;
+    options.forEach(function(option){
+        postData += `&option${i++}=${option}`
+    })
+
+    let ajax = new XMLHttpRequest();
+    ajax.onload = function(){
+        const data = JSON.parse(this.responseText);
+        if(data.hasOwnProperty('success')){
+            alert('onnistui');
+        }else{
+            showMessage(data.error);
+        }
+    }
+    ajax.open("POST", "backend/createNewPoll.php", true);
+    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajax.send(postData);
+
+}
 
 function deleteLastOption(event){
 
