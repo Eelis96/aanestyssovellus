@@ -24,22 +24,6 @@ $id = intval($_GET['id']);
 </div>
 
 
-<!--
-
-    <li class="list-group-item"><button class="btn btn-lg btn-primary">okok</button></li>
-    <li class="list-group-item"><button class="btn btn-lg btn-primary">mpikkuu</button></li>
-    <li class="list-group-item"><button class="btn  btn-lg btn-primary">juepli juu</button></li>
-
--->
-
-
-
-
-
-
-
-
-
 <script src="js/common.js"></script>
 <script src="js/vote.js"></script>
 

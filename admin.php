@@ -3,7 +3,7 @@
 <?php include_once 'layout/nav.inc.php'; ?>
 
 <div class="jumbotron">
-    <h1 class="display-3">Welcome to VoteApp</h1>
+    <h1 class="display-3">Welcome to VoteApp Admin Page</h1>
     <?php if(isset($_SESSION['logged_in'])):   ?>
         <p>You Have Logged In As <?php echo $_SESSION['username']; ?></p>
         <?php endif; ?>
@@ -29,8 +29,7 @@
 </div>
 
 
-
-<script src="js/index.js"></script>
+<script src="js/admin.js"></script>
 <script src="js/common.js"></script>
 
 <?php include_once 'layout/bottom.inc.php'; ?>

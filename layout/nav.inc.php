@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">VoteApp</a>
+        <h2 class="navbar-brand">VoteApp</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -7,9 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="register.php">Register</a>
@@ -27,6 +25,11 @@
             <?php if(isset($_SESSION['logged_in'])): ?>
             <li class="nav-item">
               <a class="nav-link" href="newpoll.php">New poll</a>
+            </li>
+          <?php endif; ?>
+          <?php if(isset($_SESSION['logged_in'])): ?>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.php">Admin Page</a>
             </li>
           <?php endif; ?>
           </ul>
