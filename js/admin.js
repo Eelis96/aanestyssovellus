@@ -133,5 +133,6 @@ function deletePoll(id){
 }
 
 function editPoll(id){
-alert('Edit ' + id);
+    window.location.href = "editpoll.php?id="+id;
+
 }

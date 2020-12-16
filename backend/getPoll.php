@@ -19,7 +19,7 @@ try{
             'error' => 'Error'
         );
     }else{
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         $data = $result;
     }
