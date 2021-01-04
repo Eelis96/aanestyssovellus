@@ -3,7 +3,7 @@
 <?php include_once 'layout/nav.inc.php'; ?>
 
 <div class="jumbotron">
-    <h1 class="display-3">Welcome to VoteApp</h1>
+    <h1 class="display-3">Welcome to PollApp</h1>
     <?php if(isset($_SESSION['logged_in'])):   ?>
         <p>You Have Logged In As <?php echo $_SESSION['username']; ?></p>
         <?php endif; ?>

@@ -16,9 +16,18 @@ $id = intval($_GET['id']);
 <div class="container">
 
     <h2></h2>
+
+    <div id="msg" class="alert alert-dismissible alert-warning d-none">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading"></h4>
+        <p class="mb-0"></p>
+    </div>
+
     <ul id="optionsUl" class="list-group">
     
     </ul>
+
+    <button class="btn btn-lg btn-warning" id="resultButton">Results</button>
 
 
 </div>
